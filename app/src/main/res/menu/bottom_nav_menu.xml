@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/tu_biblioteca"
+        android:id="@+id/libraryFragment"
+        android:icon="@drawable/ic_baseline_library_books_24"/>
+    <item android:title="@string/playlists"
+        android:id="@+id/playlistsFragment"
+        android:icon="@drawable/ic_baseline_queue_music_24"/>
+</menu>

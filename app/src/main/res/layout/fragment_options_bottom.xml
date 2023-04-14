@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/opt_album_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/album_desconocido"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/opt_middle"
+        app:layout_constraintTop_toBottomOf="@+id/opt_song_name"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/image_song_opt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/box" />
+
+    <TextView
+        android:id="@+id/opt_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/canci_n_desconocida"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_song_opt" />
+
+    <TextView
+        android:id="@+id/opt_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="|"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt_song_name" />
+
+    <TextView
+        android:id="@+id/opt_authors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/autor_desconocido"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@+id/opt_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt_song_name"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- buttons -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_fav_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opt_authors"
+        android:background="@drawable/my_touch_selector"
+        android:clickable="true"
+        android:focusable="true">
+        <!-- add fav -->
+
+        <ImageView
+            android:id="@+id/opt_heart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_image_view"
+            android:padding="8dp"
+            app:circularflow_radiusInDP="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.075"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_favorite_border" />
+
+        <TextView
+            android:id="@+id/textViewFavs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:text="@string/agregar_a_favoritos"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/opt_heart"
+            app:layout_constraintTop_toTopOf="@+id/opt_heart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- playlist -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_playlist_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_fav_opt"
+        android:background="@drawable/my_touch_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/opt_playlist"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_image_view"
+            android:padding="8dp"
+            app:circularflow_radiusInDP="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.075"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_library_music_24"
+            app:tint="@color/purple_300"
+            />
+
+        <TextView
+            android:id="@+id/text_opt_playlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:text="@string/agregar_a_playlist"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/opt_playlist"
+            app:layout_constraintTop_toTopOf="@+id/opt_playlist" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- music queue-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_queue_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_playlist_opt"
+        android:background="@drawable/my_touch_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/opt_queue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:background="@drawable/rounded_image_view"
+            android:padding="8dp"
+            app:circularflow_radiusInDP="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.075"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_queue_music_24"
+            app:tint="@color/purple_300"
+            />
+
+        <TextView
+            android:id="@+id/text_opt_queue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:text="@string/agregar_a_fila_de_reproducci_n"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/opt_queue"
+            app:layout_constraintTop_toTopOf="@+id/opt_queue" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- view album -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_album_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_queue_opt"
+        android:background="@drawable/my_touch_selector"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/opt_see_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_image_view"
+            android:padding="8dp"
+            app:circularflow_radiusInDP="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.075"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_album_24"
+            app:tint="@color/purple_300"/>
+
+        <TextView
+            android:id="@+id/text_opt_album"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:text="@string/ver_lbum"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/opt_see_album"
+            app:layout_constraintTop_toTopOf="@+id/opt_see_album" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- view artist -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_artists_opt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_album_opt"
+        android:background="@drawable/my_touch_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/opt_see_artist"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_image_view"
+            android:padding="8dp"
+
+
+            app:layout_constraintDimensionRatio="1:1"
+
+            app:layout_constraintHeight_percent="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_pin_24"
+            app:tint="@color/purple_300" />
+
+    <TextView
+        android:id="@+id/text_opt_see_album"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="left"
+        android:text="@string/ver_artista"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/opt_see_artist"
+        app:layout_constraintTop_toTopOf="@+id/opt_see_artist" />
+
+    <!-- -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

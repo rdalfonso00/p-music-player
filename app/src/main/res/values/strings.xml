@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">P-MusicPlayer</string>
+    <string name="tu_biblioteca">Tu Biblioteca</string>
+    <string name="playlists">Playlists</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="canciones">Canciones</string>
+    <string name="artistas">Artistas</string>
+    <string name="albumes">Álbumes</string>
+    <string name="favourite_button_description">favorite button deescription</string>
+    <string name="options_button_description">options button description</string>
+    <string name="nueva_playlist">Nueva Playlist</string>
+    <string name="agregar_a_favoritos">Agregar a favoritos</string>
+    <string name="agregar_a_playlist">Agregar a playlist</string>
+    <string name="agregar_a_fila_de_reproducci_n">Agregar a fila de reproducción</string>
+    <string name="ver_lbum">Ver álbum</string>
+    <string name="ver_artista">Ver artista</string>
+    <string name="album_desconocido"><![CDATA[<Álbum desconocido>]]></string>
+    <string name="autor_desconocido"><![CDATA[<Autor desconocido>]]></string>
+    <string name="canci_n_desconocida"><![CDATA[<Canción desconocida>]]></string>
+    <string name="unknown_artist"><![CDATA[<Unknown artist>]]></string>
+    <string name="editar">Editar</string>
+    <string name="agregar_canciones">Agregar canciones</string>
+    <string name="empty_playlist_message">Vaya... se ve muy vacío por aquí.\n\nConsidera agregar alguna canción presionando \'Agregar canciones\'</string>
+    <string name="_00_00">00:00</string>
+    <string name="duraci_n">Duración:</string>
+</resources>
